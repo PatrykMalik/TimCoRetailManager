@@ -22,13 +22,13 @@ namespace TRMDataManager
             // Configure validation logic for usernames
             manager.UserValidator = new UserValidator<ApplicationUser>(manager)
             {
-                AllowOnlyAlphanumericUserNames = false,
-                RequireUniqueEmail = true
+                AllowOnlyAlphanumericUserNames = false, // wymaga używaia tylko alfanumerycznych danych do jako nazwa użytkownika
+                RequireUniqueEmail = true               // wymaga unikalnego adresu email dla każdego konta
             };
             // Configure validation logic for passwords
             manager.PasswordValidator = new PasswordValidator
             {
-                RequiredLength = 6,
+                RequiredLength = 6,                     
                 RequireNonLetterOrDigit = true,
                 RequireDigit = true,
                 RequireLowercase = true,
